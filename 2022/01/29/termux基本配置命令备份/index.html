@@ -9,7 +9,7 @@
     
     <title>
         
-            归档: 2022/1 |
+            termux基本配置命令备份 |
         
         Nexus-BLOG
     </title>
@@ -70,7 +70,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/archives"
                             >
                                 归档
@@ -130,7 +130,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/archives">归档</a>
                 </li>
             
@@ -170,45 +170,154 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">termux基本配置命令备份</span>
+        </div>
+
         
-<div class="archive-list-container">
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/Blue.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Ark</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-01-29 15:21:19</span>
+        <span class="mobile">2022-01-29 15:21</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2022</span>
-                <span class="archive-year-post-count">[3]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/01/29/termux%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4%E5%A4%87%E4%BB%BD/"
-                        >termux基本配置命令备份</a>
-                        <span class="article-date">01-29</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/01/29/%E6%B5%8B%E8%AF%95/"
-                        >测试文档</a>
-                        <span class="article-date">01-29</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/01/29/hello-world/"
-                        >Hello World</a>
-                        <span class="article-date">01-29</span>
-                    </li>
-                
-            </ul>
-        </section>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>141 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+        </span>
+    
     
 </div>
 
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h3 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ termux-change-repo</span><br></pre></td></tr></table></figure>
+
+<h3 id="基本配置组装"><a href="#基本配置组装" class="headerlink" title="基本配置组装"></a>基本配置组装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pkg install vim git wget unzip curl tree</span><br></pre></td></tr></table></figure>
+
+<h3 id="termux美化"><a href="#termux美化" class="headerlink" title="termux美化"></a>termux美化</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://html.sqlsec.com/termux-install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="vim-美化"><a href="#vim-美化" class="headerlink" title="vim 美化"></a>vim 美化</h3><h3 id="新建一个-vimrc文件，如果有就不需要"><a href="#新建一个-vimrc文件，如果有就不需要" class="headerlink" title="新建一个.vimrc文件，如果有就不需要"></a>新建一个.vimrc文件，如果有就不需要</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.vimrc</span><br></pre></td></tr></table></figure>
+<h3 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1</span><br><span class="line"><span class="built_in">set</span> enc=utf8</span><br><span class="line"><span class="built_in">set</span> fencs=utf8,gbk,gb2312,gb18030</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> nu                <span class="string">&quot; 显示行号</span></span><br><span class="line"><span class="string">colorscheme desert    &quot;</span> 颜色主题,注意只需要将desert改为你喜欢的主题就好了，我这里推荐murphy</span><br><span class="line">syntax on             <span class="string">&quot; 打开语法高亮</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="pip-换源"><a href="#pip-换源" class="headerlink" title="pip 换源"></a>pip 换源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip config <span class="built_in">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/01/29/%E6%B5%8B%E8%AF%95/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">测试文档</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '4ba6e6fb6796c2e5b8db',
+                    clientSecret: 'a409e35be4561424c564a880a6c3c8f66a1d63c3',
+                    repo: 'Hexo-Gitalk-Issues',
+                    owner: 'Ark-pro',
+                    admin: ['Ark-pro'],
+                    id: __gitalk__pathname,
+                    language: 'zh-CN'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
     </div>
 </div>
+
 
                 
             </div>
@@ -238,6 +347,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -284,6 +414,14 @@
     </div>
 
     
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8D%A2%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">换源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E7%BB%84%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">基本配置组装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#termux%E7%BE%8E%E5%8C%96"><span class="nav-number">3.</span> <span class="nav-text">termux美化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim-%E7%BE%8E%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">vim 美化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA-vimrc%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%9C%89%E5%B0%B1%E4%B8%8D%E9%9C%80%E8%A6%81"><span class="nav-number">5.</span> <span class="nav-text">新建一个.vimrc文件，如果有就不需要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="nav-number">6.</span> <span class="nav-text">配置命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pip-%E6%8D%A2%E6%BA%90"><span class="nav-number">7.</span> <span class="nav-text">pip 换源</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
 
     <div class="image-viewer-container">
     <img src="">
@@ -309,6 +447,8 @@
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/js/toc.js"></script>
     
 </div>
 
